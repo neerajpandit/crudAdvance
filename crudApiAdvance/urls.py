@@ -20,6 +20,14 @@ from api import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('stuapi/',views.StuApi),
-    path('stuapi/<int:pk>',views.StuApi)
-]
+    # ''' function view api Urls......'''
+    # '''path('stuapi/',views.StuApi),
+    # path('stuapi/<int:pk>',views.StuApi)'''
+
+#......Class Based Views Uels.....
+ #   path('stuapi/',views.StudentAPI.as_view()),
+  #  path('stuapi/<int:pk>',views.StudentAPI.as_view()),
+
+  #...........Generic Api................
+  path('stuapi/',views.StudentList.as_view()),
+ ]
